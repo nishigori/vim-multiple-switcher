@@ -11,9 +11,9 @@ endfunction
 
 function! multiple_switcher#switch#paste()
   if &paste
-    set nopaste
+    setlocal nopaste
   else
-    set paste
+    setlocal paste
   endif
 endfunction
 
@@ -30,9 +30,9 @@ function! multiple_switcher#switch#number()
     echoerr 'this version is not supported relativenumber.'
   endif
   if &number
-    set relativenumber
+    setlocal relativenumber
   else
-    set number
+    setlocal number
   endif
 endfunction
 
