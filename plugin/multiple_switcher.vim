@@ -16,6 +16,7 @@ set cpo&vim
 if !exists('g:multiple_switcher_no_default_key_maps')
   nnoremap <silent>,b :call multiple_switcher#switch('buffer')<CR>
   nnoremap <silent>,p :call multiple_switcher#switch('paste')<CR>
+  nnoremap <silent>,w :call multiple_switcher#switch('wrap')<CR>
   if version >= 703
     nnoremap <silent>,n :call multiple_switcher#switch('number')<CR>
   endif

@@ -17,6 +17,14 @@ function! multiple_switcher#switch#paste()
   endif
 endfunction
 
+function! multiple_switcher#switch#wrap()
+    if &wrap
+      setlocal nowrap
+    else
+      setlocal wrap
+    endif
+endfunction
+
 function! multiple_switcher#switch#number()
   if version < 703
     echoerr 'this version is not supported relativenumber.'
