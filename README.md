@@ -42,4 +42,4 @@ ex.)
 
     ex.)
 
-    'nmap <silent> <Leader>b <Plug>(muotiple_switcher_buffer)'
+    `nmap <silent> <Leader>b <Plug>(muotiple_switcher_buffer)`
