@@ -13,12 +13,21 @@ endif
 let s:save_cpo = &cpo
 set cpo&vim
 
+nnoremap <silent> <Plug>(multiple_switcher_buffer)
+  \ :<C-u>call multiple_switcher#switch('buffer')<CR>
+nnoremap <silent> <Plug>(multiple_switcher_paste)
+  \ :<C-u>call multiple_switcher#switch('paste')<CR>
+nnoremap <silent> <Plug>(multiple_switcher_wrap)
+  \ :<C-u>call multiple_switcher#switch('wrap')<CR>
+nnoremap <silent> <Plug>(multiple_switcher_number)
+  \ :<C-u>call multiple_switcher#switch('number')<CR>
+
 if !exists('g:multiple_switcher_no_default_key_maps')
-  nnoremap <silent>,b :call multiple_switcher#switch('buffer')<CR>
-  nnoremap <silent>,p :call multiple_switcher#switch('paste')<CR>
-  nnoremap <silent>,w :call multiple_switcher#switch('wrap')<CR>
-  if version >= 703
-    nnoremap <silent>,n :call multiple_switcher#switch('number')<CR>
+  silent! nmap <silent> ,b <Plug>(multiple_switcher_buffer)
+  silent! nmap <silent> ,p <Plug>(multiple_switcher_paste)
+  silent! nmap <silent> ,w <Plug>(multiple_switcher_wrap)
+  if v:version >= 703
+    silent! nmap <silent> ,n <Plug>(multiple_switcher_number)
   endif
 endif
 
