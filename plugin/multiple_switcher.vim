@@ -15,6 +15,8 @@ set cpo&vim
 
 nnoremap <silent> <Plug>(multiple_switcher_buffer)
   \ :<C-u>call multiple_switcher#switch('buffer')<CR>
+nnoremap <silent> <Plug>(multiple_switcher_expandtab)
+  \ :<C-u>call multiple_switcher#switch('expandtab')<CR>
 nnoremap <silent> <Plug>(multiple_switcher_paste)
   \ :<C-u>call multiple_switcher#switch('paste')<CR>
 nnoremap <silent> <Plug>(multiple_switcher_wrap)
@@ -24,6 +26,7 @@ nnoremap <silent> <Plug>(multiple_switcher_number)
 
 if !exists('g:multiple_switcher_no_default_key_maps')
   silent! nmap <silent> ,b <Plug>(multiple_switcher_buffer)
+  silent! nmap <silent> ,e <Plug>(multiple_switcher_expandtab)
   silent! nmap <silent> ,p <Plug>(multiple_switcher_paste)
   silent! nmap <silent> ,w <Plug>(multiple_switcher_wrap)
   if v:version >= 703

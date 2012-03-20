@@ -9,6 +9,14 @@ function! multiple_switcher#switch#buffer()
   endif
 endfunction
 
+function! multiple_switcher#switch#expandtab()
+  if &expandtab
+    setlocal noexpandtab
+  else
+    setlocal expandtab
+  endif
+endfunction
+
 function! multiple_switcher#switch#paste()
   if &paste
     setlocal nopaste

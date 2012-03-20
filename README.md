@@ -17,6 +17,7 @@ ex.)
 ## Availble modes
 
 * buffer (next <-> previous)
+* expandtab (expandtab <-> noexpandtab)
 * number (number <-> relativenumber)
     for vim's version overed 7.3.
 * paste (paste <-> nopaste)
@@ -27,6 +28,8 @@ ex.)
 * default key mapping
 
     ,b : switched buffer (next, previous)
+
+    ,e : switched expandtab (expandtab, noexpandtab)
 
     ,n : switched number (number, relativenumber)
 
