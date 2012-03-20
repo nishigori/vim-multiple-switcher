@@ -26,7 +26,7 @@ function! multiple_switcher#switch#wrap()
 endfunction
 
 function! multiple_switcher#switch#number()
-  if version < 703
+  if v:version < 703
     echoerr 'this version is not supported relativenumber.'
   endif
   if &number
