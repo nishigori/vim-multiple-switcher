@@ -1,10 +1,12 @@
 function! multiple_switcher#switch#buffer()
   let buffer_flg = get(g:, 'multiple_switcher_buffer_flg', 0)
   if buffer_flg == 0
-    bnext
+    " Maybe you would want to use this first scene is
+    "   when you want to go back to the previous buffer.
+    bprevious
     let g:multiple_switcher_buffer_flg = 1
   else
-    bprevious
+    bnext
     let g:multiple_switcher_buffer_flg = 0
   endif
 endfunction
