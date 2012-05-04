@@ -12,44 +12,31 @@ function! multiple_switcher#switch#buffer()
 endfunction
 
 function! multiple_switcher#switch#expandtab()
-  if &expandtab
-    setlocal noexpandtab
-  else
-    setlocal expandtab
-  endif
+  set invexpandtab
 endfunction
 
 function! multiple_switcher#switch#paste()
-  if &paste
-    setlocal nopaste
-  else
-    setlocal paste
-  endif
+  set invpaste
 endfunction
 
 function! multiple_switcher#switch#wrap()
-    if &wrap
-      setlocal nowrap
-    else
-      setlocal wrap
-    endif
+  set invwrap
 endfunction
 
 function! multiple_switcher#switch#number()
   if v:version < 703
-    echoerr 'this version is not supported relativenumber.'
-  endif
-  if &number
-    setlocal relativenumber
+    set invnumber
+  elseif &number
+    set relativenumber
   else
-    setlocal number
+    set number
   endif
 endfunction
 
 function! multiple_switcher#switch#background()
-    if &background == 'light'
-      set background=dark
-    else
-      set background=light
-    endif
+  if &background == 'light'
+    set background=dark
+  else
+    set background=light
+  endif
 endfunction
