@@ -1,0 +1,157 @@
+*vim-multiple-switcher.txt*	Multiple Switcher (like toggle)
+
+Version: 1.0
+Author : Takuya Nishigori <nishigori.tak@gmail.com>
+License: MIT license  {{{
+    Permission is hereby granted, free of charge, to any person obtaining
+    a copy of this software and associated documentation files (the
+    "Software"), to deal in the Software without restriction, including
+    without limitation the rights to use, copy, modify, merge, publish,
+    distribute, sublicense, and/or sell copies of the Software, and to
+    permit persons to whom the Software is furnished to do so, subject to
+    the following conditions:
+    The above copyright notice and this permission notice shall be included
+    in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+}}}
+
+CONTENTS					*vim-multiple-switcher-contents*
+
+Introduction		|vim-multiple-switcher-introduction|
+Usage			|vim-multiple-switcher-usage|
+Install			|vim-multiple-switcher-install|
+Interface		|vim-multiple-switcher-interface|
+  Commands		  |vim-multiple-switcher-commands|
+  Variables		  |vim-multiple-switcher-variables|
+  Key mappings		  |vim-multiple-switcher-key-mappings|
+Create source		|vim-multiple-switcher-create-source|
+Configulation Examples	|vim-multiple-switcher-examples|
+Changelog		|vim-multiple-switcher-changelog|
+
+==============================================================================
+INTRODUCTION					*vim-multiple-switcher-introduction*
+
+*vim-multiple-switcher* or *multiple-switcher.vim* switched any options.
+For exam, buffer, expandtab ...
+
+==============================================================================
+USAGE						*vim-multiple-switcher-usage*
+
+	In case when you want to switch any option.
+>
+	:call multiple_switcher#switch('`mode`')
+
+==============================================================================
+INSTALL						*vim-multiple-switcher-install*
+
+Install the distributed files into Vim script directory which is usually
+~/.vim/, or $HOME/vimfiles on Windows.
+
+	~/.vim
+			/autoload
+				multiple_switcher.vim
+				/multiple_switcher
+					switch.vim
+			/plugin
+				multiple_switcher.vim
+			/doc
+				vim-multiple-switcher.txt
+
+==============================================================================
+INTERFACE					*vim-multiple-switcher-interface*
+
+------------------------------------------------------------------------------
+COMMANDS 					*vim-multiple-switcher-commands*
+
+:multiple_switcher_#switch({mode}) 			*:multiple-switcher-mode*
+
+		Switching specified mode.
+
+		Examples:
+		:call multiple_switcher#switch('expandtab')
+
+		If specified mode is not found, echoerr.
+
+------------------------------------------------------------------------------
+VARIABLES 					*vim-multiple-switcher-variables*
+
+g:multiple_switcher_no_default_key_maps				*g:multiple_switcher_no_default_key_maps*
+		Not using the default key mappings.
+
+		Default is not exists.
+
+
+------------------------------------------------------------------------------
+KEY MAPPINGS 					*vim-multiple-switcher-key-mappings*
+
+Normal mode mappings.
+
+<Plug>(multiple_switcher_buffer)				*<Plug>(multiple_switcher_buffer)*
+		Switched buffer (next, previous).
+		Default key map (normal mode) : ,b
+
+<Plug>(multiple_switcher_expandtab)				*<Plug>(multiple_switcher_expandtab)*
+		Switched expandtab (expand, noexpand).
+		Default key map (normal mode) : ,e
+
+<Plug>(multiple_switcher_paste)				*<Plug>(multiple_switcher_paste)*
+		Switched paste (paste, nopaste).
+		Default key map (normal mode) : ,p
+
+<Plug>(multiple_switcher_wrap)			*<Plug>(multiple_switcher_wrap)*
+		Switched wrap (wrap, nowrap).
+		Default key map (normal mode) : ,w
+
+<Plug>(multiple_switcher_number)			*<Plug>(multiple_switcher_number)*
+		Switched number (number, relativenumber).
+		If Vim's version is under 7.2, inv number option (number, nonumber).
+		Default key map (normal mode) : ,n
+
+<Plug>(multiple_switcher_background)			*<Plug>(multiple_switcher_background)*
+		Switched background (light, dark).
+		Default key map (normal mode) : ,B
+
+
+==============================================================================
+CREATE SOURCE					*vim-multiple-switcher-create-source*
+
+Todo
+
+(1) Create or Custom user original switch mode (multiple_switcher#add('`mode`'))
+
+------------------------------------------------------------------------------
+SOURCE 				*vim-multiple-switcher-source*
+
+	For exam:
+	function! multiple_switcher#switch('migemo')
+		set invmigemo
+	endfunction
+
+==============================================================================
+EXAMPLES					*vim-multiple-switcher-examples*
+>
+	
+	" disabled default key mapping.
+	let g:multiple_switcher_no_default_key_maps = 1
+	nmap <silent> <Leader>b <Plug>(multiple_switcher_buffer)<CR>
+	nmap <silent> <Leader>p <Plug>(multiple_switcher_paste)<CR>
+
+<
+==============================================================================
+CHANGELOG					*vim-multiple-switcher-changelog*
+
+
+2012-05-05
+- Added documentation.
+- Added any switch options.
+- Some improvements.
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:noet:fen:fdl=0:
