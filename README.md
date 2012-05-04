@@ -1,6 +1,6 @@
 # multiple_switcher.vim
 
-multiple_switcher.vim is switching any mode for Vi IMproved.
+multiple_switcher.vim is switching any option for Vi IMproved.
 
 # Install
 
@@ -60,7 +60,7 @@ ex.)
 
     let g:multiple_switcher_no_default_key_maps = 1
 
-    nmap <silent> <Leader>b <Plug>(muotiple_switcher_buffer)
+    nmap <silent> <Leader>b <Plug>(multiple_switcher_buffer)
 
     nnoremap <silent> <Leader>e :<C-u>call multiple_switcher#switch('expandtab')<CR>
 
