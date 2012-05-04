@@ -23,7 +23,7 @@ nnoremap <silent> <Plug>(multiple_switcher_background)
 if !exists('g:multiple_switcher_no_default_key_maps')
   silent! nmap <silent> ,b <Plug>(multiple_switcher_buffer)
   silent! nmap <silent> ,n <Plug>(multiple_switcher_number)
-  silent! nmap <silent> ,b <Plug>(multiple_switcher_background)
+  silent! nmap <silent> ,B <Plug>(multiple_switcher_background)
 endif
 
 let &cpo = s:save_cpo
