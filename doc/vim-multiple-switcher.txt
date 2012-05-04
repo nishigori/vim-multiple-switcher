@@ -47,6 +47,7 @@ USAGE						*vim-multiple-switcher-usage*
 	In case when you want to switch any option.
 >
 	:call multiple_switcher#switch('`mode`')
+<
 
 ==============================================================================
 INSTALL						*vim-multiple-switcher-install*
