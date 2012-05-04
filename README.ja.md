@@ -64,3 +64,4 @@ runtimepath上に以下のように配置してください。
 
     nnoremap <silent> <Leader>e :<C-u>call multiple_switcher#switch('expandtab')<CR>
 
+    nnoremap <silent> <Leader>p :<C-u>call multiple_switcher#switch('paste')<CR>
