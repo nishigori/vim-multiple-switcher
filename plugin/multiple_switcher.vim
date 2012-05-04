@@ -1,7 +1,7 @@
 "=============================================================================
 " NAME:    Multiple switcher.
 " AUTHOR:  Takuya Nishigori <nishigori.tak@gmail.com>
-" Version: 0.1
+" Version: 1.0
 " License: Creative Commons Attribution 2.1 Japan License
 "          <http://creativecommons.org/licenses/by/2.1/jp/deed.en>
 "=============================================================================
@@ -13,28 +13,14 @@ endif
 let s:save_cpo = &cpo
 set cpo&vim
 
-nnoremap <silent> <Plug>(multiple_switcher_buffer)
-  \ :<C-u>call multiple_switcher#switch('buffer')<CR>
-nnoremap <silent> <Plug>(multiple_switcher_expandtab)
-  \ :<C-u>call multiple_switcher#switch('expandtab')<CR>
-nnoremap <silent> <Plug>(multiple_switcher_paste)
-  \ :<C-u>call multiple_switcher#switch('paste')<CR>
-nnoremap <silent> <Plug>(multiple_switcher_wrap)
-  \ :<C-u>call multiple_switcher#switch('wrap')<CR>
 nnoremap <silent> <Plug>(multiple_switcher_number)
   \ :<C-u>call multiple_switcher#switch('number')<CR>
 nnoremap <silent> <Plug>(multiple_switcher_background)
   \ :<C-u>call multiple_switcher#switch('background')<CR>
 
 if !exists('g:multiple_switcher_no_default_key_maps')
-  silent! nmap <silent> ,b <Plug>(multiple_switcher_buffer)
-  silent! nmap <silent> ,e <Plug>(multiple_switcher_expandtab)
-  silent! nmap <silent> ,p <Plug>(multiple_switcher_paste)
-  silent! nmap <silent> ,w <Plug>(multiple_switcher_wrap)
-  if v:version >= 703
-    silent! nmap <silent> ,n <Plug>(multiple_switcher_number)
-  endif
-  silent! nmap <silent> ,B <Plug>(multiple_switcher_background)
+  silent! nmap <silent> ,n <Plug>(multiple_switcher_number)
+  silent! nmap <silent> ,b <Plug>(multiple_switcher_background)
 endif
 
 let &cpo = s:save_cpo
