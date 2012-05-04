@@ -21,6 +21,7 @@ runtimepath上に以下のように配置してください。
 * number (number <-> relativenumber)
 
     Vimのバージョンが7.3以上の場合の挙動です。
+
     もしバージョンが7.3より前なら、numberのinvertオプション扱いとなります。
 
 * background (light <-> bark)
@@ -49,7 +50,7 @@ runtimepath上に以下のように配置してください。
 
 デフォルトのキーマップを無効にするには、以下をvimrcに記述してください。
 
-    `let g:multiple_switcher_no_default_key_maps = 1`
+    let g:multiple_switcher_no_default_key_maps = 1
 
 ## オプション
 

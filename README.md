@@ -21,6 +21,7 @@ ex.)
 * number (number <-> relativenumber)
 
     for vim's version overed 7.3.
+
     if v:version < 7.3, toggled number option.
 
 * background (light <-> bark)
@@ -49,7 +50,7 @@ ex.)
 
 If you're needless default key mappings, specified this script at your vimrc.
 
-    `let g:multiple_switcher_no_default_key_maps = 1`
+    let g:multiple_switcher_no_default_key_maps = 1
 
 ## Options
 
@@ -63,3 +64,4 @@ ex.)
 
     nnoremap <silent> <Leader>e :<C-u>call multiple_switcher#switch('expandtab')<CR>
 
+    nnoremap <silent> <Leader>p :<C-u>call multiple_switcher#switch('paste')<CR>
