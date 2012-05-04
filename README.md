@@ -18,30 +18,23 @@ ex.)
 
 * buffer (next <-> previous)
 
-* expandtab (expandtab <-> noexpandtab)
-
 * number (number <-> relativenumber)
 
     for vim's version overed 7.3.
-    if v:version < 7.3 toggle number option.
-
-* paste (paste <-> nopaste)
-
-* wrap (wrap <-> nowrap)
+    if v:version < 7.3, toggled number option.
 
 * background (light <-> bark)
+
+* Vim's default invert options
+
+  Enabled invert options, paste|expandtab|list|title ...
+  read more, :help Q_op
 
 ## default key mapping
 
     ,b : switched buffer (next, previous)
 
-    ,e : switched expandtab (expandtab, noexpandtab)
-
     ,n : switched number (number, relativenumber)
-
-    ,p : switched paste-mode.
-
-    ,w : switched wrap (enabled, nowrap)
 
     ,B : switched background (light, dark)
 
@@ -55,5 +48,9 @@ ex.)
 
     ex.)
 
+    `let g:multiple_switcher_no_default_key_maps = 1`
+
     `nmap <silent> <Leader>b <Plug>(muotiple_switcher_buffer)`
+
+    `nnoremap <silent> <Leader>e :<C-u>call multiple_switcher#switch('expandtab')<CR>`
 

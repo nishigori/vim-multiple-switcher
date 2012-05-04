@@ -32,6 +32,21 @@ USAGE						*vim-multiple-switcher-usage*
 	:call multiple_switcher#switch('`mode`')
 <
 
+	Enable option is multiple_switcher#switch#`mode`()
+		or Vim's default invert option,
+		or your created function.
+
+	multiple_switcher#switch#`mode`()
+
+		buffer, number(relativenumber), background
+
+	Vim's default invert option.
+
+		paste, expandtab, title, list ...
+		more :help |Q_op|
+
+	Your created function.	|vim-multiple-switcher-create-source|
+
 ==============================================================================
 INSTALL						*vim-multiple-switcher-install*
 
@@ -86,18 +101,6 @@ Normal mode mappings.
 		Switched buffer (next, previous).
 		Default key map (normal mode) : ,b
 
-<Plug>(multiple_switcher_expandtab)				*<Plug>(multiple_switcher_expandtab)*
-		Switched expandtab (expand, noexpand).
-		Default key map (normal mode) : ,e
-
-<Plug>(multiple_switcher_paste)				*<Plug>(multiple_switcher_paste)*
-		Switched paste (paste, nopaste).
-		Default key map (normal mode) : ,p
-
-<Plug>(multiple_switcher_wrap)			*<Plug>(multiple_switcher_wrap)*
-		Switched wrap (wrap, nowrap).
-		Default key map (normal mode) : ,w
-
 <Plug>(multiple_switcher_number)			*<Plug>(multiple_switcher_number)*
 		Switched number (number, relativenumber).
 		If Vim's version is under 7.2, inv number option (number, nonumber).
@@ -119,8 +122,15 @@ Todo
 SOURCE 				*vim-multiple-switcher-source*
 
 	For exam:
-	function! multiple_switcher#switch('migemo')
-		set invmigemo
+
+	function! multiple_switcher#switch('hoge')
+		if g:hoge == 1
+			let g:hoge = 0
+			set nohoge
+		else
+			let g:hoge = 1
+			set hoge
+		endif
 	endfunction
 
 ==============================================================================
@@ -130,7 +140,10 @@ EXAMPLES					*vim-multiple-switcher-examples*
 	" disabled default key mapping.
 	let g:multiple_switcher_no_default_key_maps = 1
 	nmap <silent> <Leader>b <Plug>(multiple_switcher_buffer)<CR>
-	nmap <silent> <Leader>p <Plug>(multiple_switcher_paste)<CR>
+	nmap <silent> <Leader>n <Plug>(multiple_switcher_number)<CR>
+	nnoremap <silent> <Leader>p :<C-u>call multiple_switcher#switch('paste')<CR>
+	nnoremap <silent> <Leader>e :<C-u>call multiple_switcher#switch('expandtab')<CR>
+	nnoremap <silent> <Leader>m :<C-u>call multiple_switcher#switch('migemo')<CR>
 
 <
 ==============================================================================
