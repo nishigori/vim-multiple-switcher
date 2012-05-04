@@ -69,7 +69,12 @@ VARIABLES 					*vim-multiple-switcher-variables*
 g:multiple_switcher_no_default_key_maps				*g:multiple_switcher_no_default_key_maps*
 		Not using the default key mappings.
 
-		Default is not exists.
+		Default value is not exists.
+
+g:multiple_switcher_no_info_message				*g:multiple_switcher_no_default_key_maps*
+		Disabled information message.
+
+		Default value is not exists.
 
 
 ------------------------------------------------------------------------------
