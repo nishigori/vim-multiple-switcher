@@ -28,17 +28,26 @@ ex.)
 * Vim's default invert options
 
   Enabled invert options, paste|expandtab|list|title ...
+
+  So, Equivalent to set inv****
+
   read more, :help Q_op
 
 ## default key mapping
 
-    ,b : switched buffer (next, previous)
+* ,b
 
-    ,n : switched number (number, relativenumber)
+> switched buffer (next, previous)
 
-    ,B : switched background (light, dark)
+* ,n
 
-    If you're needless default key mappings, specified this script at your vimrc.
+> switched number (number, relativenumber)
+
+* ,B
+
+> switched background (light, dark)
+
+If you're needless default key mappings, specified this script at your vimrc.
 
     `let g:multiple_switcher_no_default_key_maps = 1`
 
@@ -46,11 +55,11 @@ ex.)
 
 * custom key mapping
 
-    ex.)
+ex.)
 
-    `let g:multiple_switcher_no_default_key_maps = 1`
+    let g:multiple_switcher_no_default_key_maps = 1
 
-    `nmap <silent> <Leader>b <Plug>(muotiple_switcher_buffer)`
+    nmap <silent> <Leader>b <Plug>(muotiple_switcher_buffer)
 
-    `nnoremap <silent> <Leader>e :<C-u>call multiple_switcher#switch('expandtab')<CR>`
+    nnoremap <silent> <Leader>e :<C-u>call multiple_switcher#switch('expandtab')<CR>
 

@@ -28,18 +28,26 @@ runtimepath上に以下のように配置してください。
 * Vimデフォルトのインバートオプション
 
   主に真偽値で判定されるオプションも有効となります。
-  インバートオプションについては :help Q_op を参照してください。
 
+  これは、set inv○○○ と同じ働きをします。
+
+  インバートオプションについては :help Q_op を参照してください。
 
 ## デフォルトキーマッピング
 
-    ,b : switched buffer (next, previous)
+* ,b
 
-    ,n : switched number (number, relativenumber)
+> switched buffer (next, previous)
 
-    ,B : switched background (light, dark)
+* ,n
 
-    デフォルトのキーマップを無効にするには、以下をvimrcに記述してください。
+> switched number (number, relativenumber)
+
+* ,B
+
+> switched background (light, dark)
+
+デフォルトのキーマップを無効にするには、以下をvimrcに記述してください。
 
     `let g:multiple_switcher_no_default_key_maps = 1`
 
@@ -47,11 +55,11 @@ runtimepath上に以下のように配置してください。
 
 * custom key mapping
 
-    例.)
+例.)
 
-    `let g:multiple_switcher_no_default_key_maps = 1`
+    let g:multiple_switcher_no_default_key_maps = 1
 
-    `nmap <silent> <Leader>b <Plug>(muotiple_switcher_buffer)`
+    nmap <silent> <Leader>b <Plug>(muotiple_switcher_buffer)
 
-    `nnoremap <silent> <Leader>e :<C-u>call multiple_switcher#switch('expandtab')<CR>`
+    nnoremap <silent> <Leader>e :<C-u>call multiple_switcher#switch('expandtab')<CR>
 
