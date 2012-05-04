@@ -2,7 +2,7 @@
 
 multiple_switcher.vim is switching any option for Vi IMproved.
 
-# Install
+## Install
 
 Please put your vim's runtimepath this plugin files.
 

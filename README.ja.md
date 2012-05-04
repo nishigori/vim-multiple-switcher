@@ -2,7 +2,7 @@
 
 Vim上で様々なオプションをスイッチ（トグル）するプラグイン。
 
-# Install
+## Install
 
 runtimepath上に以下のように配置してください。
 
