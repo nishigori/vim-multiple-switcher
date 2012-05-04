@@ -17,16 +17,21 @@ runtimepath上に以下のように配置してください。
 ## モード一覧
 
 * buffer (next <-> previous)
+
 * expandtab (expandtab <-> noexpandtab)
+
 * number (number <-> relativenumber)
+
     for vim's version overed 7.3.
+    if v:version < 7.3 toggle number option.
+
 * paste (paste <-> nopaste)
+
 * wrap (wrap <-> nowrap)
+
 * background (light <-> bark)
 
-## How to use
-
-* デフォルトキーマッピング
+## デフォルトキーマッピング
 
     ,b : switched buffer (next, previous)
 
@@ -43,6 +48,8 @@ runtimepath上に以下のように配置してください。
     デフォルトのキーマップを無効にするには、以下をvimrcに記述してください。
 
     `let g:multiple_switcher_no_default_key_maps = 1`
+
+## オプション
 
 * custom key mapping
 

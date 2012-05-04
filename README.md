@@ -17,16 +17,21 @@ ex.)
 ## Availble modes
 
 * buffer (next <-> previous)
+
 * expandtab (expandtab <-> noexpandtab)
+
 * number (number <-> relativenumber)
+
     for vim's version overed 7.3.
+    if v:version < 7.3 toggle number option.
+
 * paste (paste <-> nopaste)
+
 * wrap (wrap <-> nowrap)
+
 * background (light <-> bark)
 
-## How to use
-
-* default key mapping
+## default key mapping
 
     ,b : switched buffer (next, previous)
 
@@ -44,8 +49,11 @@ ex.)
 
     `let g:multiple_switcher_no_default_key_maps = 1`
 
+## Options
+
 * custom key mapping
 
     ex.)
 
     `nmap <silent> <Leader>b <Plug>(muotiple_switcher_buffer)`
+
