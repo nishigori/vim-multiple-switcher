@@ -23,6 +23,8 @@ nnoremap <silent> <Plug>(multiple_switcher_wrap)
   \ :<C-u>call multiple_switcher#switch('wrap')<CR>
 nnoremap <silent> <Plug>(multiple_switcher_number)
   \ :<C-u>call multiple_switcher#switch('number')<CR>
+nnoremap <silent> <Plug>(multiple_switcher_background)
+  \ :<C-u>call multiple_switcher#switch('background')<CR>
 
 if !exists('g:multiple_switcher_no_default_key_maps')
   silent! nmap <silent> ,b <Plug>(multiple_switcher_buffer)
@@ -32,6 +34,7 @@ if !exists('g:multiple_switcher_no_default_key_maps')
   if v:version >= 703
     silent! nmap <silent> ,n <Plug>(multiple_switcher_number)
   endif
+  silent! nmap <silent> ,B <Plug>(multiple_switcher_background)
 endif
 
 let &cpo = s:save_cpo

@@ -1,12 +1,12 @@
 # multiple_switcher.vim
 
-multiple_switcher.vim is switching any mode for Vi IMproved.
+Vim上で様々なオプションをスイッチ（トグル）するプラグイン。
 
 # Install
 
-Please put your vim's runtimepath this plugin files.
+runtimepath上に以下のように配置してください。
 
-ex.)
+例.)
 
     ~/.vim/plugin/multiple_switcher.vim
 
@@ -14,7 +14,7 @@ ex.)
 
     ~/.vim/autoload/multiple_switcher/switch.vim
 
-## Availble modes
+## モード一覧
 
 * buffer (next <-> previous)
 * expandtab (expandtab <-> noexpandtab)
@@ -26,7 +26,7 @@ ex.)
 
 ## How to use
 
-* default key mapping
+* デフォルトキーマッピング
 
     ,b : switched buffer (next, previous)
 
@@ -40,12 +40,12 @@ ex.)
 
     ,B : switched background (light, dark)
 
-    If you're needless default key mappings, specified this script at your vimrc.
+    デフォルトのキーマップを無効にするには、以下をvimrcに記述してください。
 
     `let g:multiple_switcher_no_default_key_maps = 1`
 
 * custom key mapping
 
-    ex.)
+    例.)
 
     `nmap <silent> <Leader>b <Plug>(muotiple_switcher_buffer)`

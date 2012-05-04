@@ -46,3 +46,10 @@ function! multiple_switcher#switch#number()
   endif
 endfunction
 
+function! multiple_switcher#switch#background()
+    if &background == 'light'
+      set background=dark
+    else
+      set background=light
+    endif
+endfunction
