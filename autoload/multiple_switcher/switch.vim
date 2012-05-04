@@ -11,18 +11,6 @@ function! multiple_switcher#switch#buffer()
   endif
 endfunction
 
-function! multiple_switcher#switch#expandtab()
-  set invexpandtab
-endfunction
-
-function! multiple_switcher#switch#paste()
-  set invpaste
-endfunction
-
-function! multiple_switcher#switch#wrap()
-  set invwrap
-endfunction
-
 function! multiple_switcher#switch#number()
   if v:version < 703
     set invnumber

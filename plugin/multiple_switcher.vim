@@ -13,12 +13,15 @@ endif
 let s:save_cpo = &cpo
 set cpo&vim
 
+nnoremap <silent> <Plug>(multiple_switcher_buffer)
+  \ :<C-u>call multiple_switcher#switch('buffer')<CR>
 nnoremap <silent> <Plug>(multiple_switcher_number)
   \ :<C-u>call multiple_switcher#switch('number')<CR>
 nnoremap <silent> <Plug>(multiple_switcher_background)
   \ :<C-u>call multiple_switcher#switch('background')<CR>
 
 if !exists('g:multiple_switcher_no_default_key_maps')
+  silent! nmap <silent> ,b <Plug>(multiple_switcher_buffer)
   silent! nmap <silent> ,n <Plug>(multiple_switcher_number)
   silent! nmap <silent> ,b <Plug>(multiple_switcher_background)
 endif
